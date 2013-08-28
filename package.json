@@ -1,0 +1,19 @@
+{
+  "name": "damerau-levenshtein",
+  "version": "0.0.0",
+  "description": "Damerau - Levenshtein distance by The Spanish Inquisition + relative distance",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "Damerau-Levenshtein",
+    "Damerau",
+    "Levenshtein",
+    "distance",
+    "compare",
+    "relative"
+  ],
+  "author": "The Spanish Inquisition",
+  "license": "BSD-2-Clause"
+}
