@@ -42,16 +42,13 @@ module.exports = function(__this, that, limit) {
   }
 
   distance = matrix[thisLength][thatLength];
-  relative = distance / Math.max.apply (undefined, [s1, s2].map ( function (e) {
+  relative = distance / Math.max.apply (undefined, [__this, that].map ( function (e) {
     return e.length;
   }));
 
-};
+  return {
+    distance: distance,
+    relative: relative
+  };
 
-// relative distance
-rdld = function (s1, s2) {
-  return 
 };
-
-module.exports = ldl
-module.exports.relative = rldl
