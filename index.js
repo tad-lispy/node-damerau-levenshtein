@@ -3,21 +3,35 @@
 // Cache the matrix. Note this implementation is limited to
 // strings of 64 char or less. This could be altered to update
 // dynamically, or a larger value could be used.
-var matrix = [];
-for (var i = 0; i < 64; i++) {
-  matrix[i] = [i];
-  matrix[i].length = 64;
-}
-for (var i = 0; i < 64; i++) {
-  matrix[0][i] = i;
-}
+
+// TODO: grok it.
+// The matrix was cached, as above comment states, but it was throwing unpredictable results sometimes. Either there was a bug or I was using it wrong. Now matrix is recreated on each call and results are correct. This probabily hits performance.
 
 module.exports = function(__this, that, limit) {
-  var thisLength = __this.length, thatLength = that.length;
+  var matrix = [];
+  for (var i = 0; i < 64; i++) {
+    matrix[i] = [i];
+    matrix[i].length = 64;
+  }
+  for (var i = 0; i < 64; i++) {
+    matrix[0][i] = i;
+  }
 
-  if (Math.abs(thisLength - thatLength) > (limit || 32)) return limit || 32;
-  if (thisLength === 0) return thatLength;
-  if (thatLength === 0) return thisLength;
+  var thisLength = __this.length,
+      thatLength = that.length;
+
+  prepare = function (steps) {
+    distance            = {};
+    distance.steps      = steps;
+    distance.relative   = steps / Math.max(thisLength, thatLength);
+    distance.similarity = 1 - distance.relative;
+
+    return distance;
+  }
+
+  if (Math.abs(thisLength - thatLength) > (limit || 32)) return prepare (limit || 32);
+  if (thisLength === 0) return prepare (thatLength);
+  if (thatLength === 0) return prepare (thisLength);
 
   // Calculate matrix.
   var this_i, that_j, cost, min, t;
@@ -27,7 +41,7 @@ module.exports = function(__this, that, limit) {
     // Step 4
     for (j = 1; j <= thatLength; ++j) {
       // Check the jagged ld total so far
-      if (i === j && matrix[i][j] > 4) return thisLength;
+      if (i === j && matrix[i][j] > 4) return prepare (thisLength);
 
       that_j = that[j-1];
       cost = (this_i === that_j) ? 0 : 1; // Step 5
@@ -41,14 +55,6 @@ module.exports = function(__this, that, limit) {
     }
   }
 
-  distance = matrix[thisLength][thatLength];
-  relative = distance / Math.max.apply (undefined, [__this, that].map ( function (e) {
-    return e.length;
-  }));
-
-  return {
-    distance: distance,
-    relative: relative
-  };
+  return prepare (matrix[thisLength][thatLength])
 
 };
