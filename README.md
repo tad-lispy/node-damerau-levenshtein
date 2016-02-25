@@ -6,8 +6,9 @@ It provides a function that takes two string arguments and returns a hash like t
 
 ```` javascript
 {
-  distance: 5,  // Levenstein demerau distance
-  relative: 0.7 // distance / length of bigger of two words
+  steps: 5,       // Levenstein demerau distance
+  relative: 0.7,  // steps / length of bigger of two words
+  similarity: 0.3 // 1 - relative
 }
 ````
 
