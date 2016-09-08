@@ -15,5 +15,8 @@
     "relative"
   ],
   "author": "The Spanish Inquisition",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "mocha": "^3.0.2"
+  }
 }
