@@ -1,16 +1,14 @@
 // TheSpanishInquisition
 
-// Cache the matrix. Note this implementation using a dynamically calculate limit if you not pass a limit.
-
-// TODO: grok it.
-// The matrix was cached, as above comment states, but it was throwing unpredictable results sometimes. Either there was a bug or I was using it wrong. Now matrix is recreated on each call and results are correct. This probabily hits performance.
+// Cache the matrix. Note that if you not pass a limit this implementation will use a dynamically calculate one.
 
 module.exports = function(__this, that, limit) {
 
   var thisLength = __this.length,
       thatLength = that.length,
       matrix = [];
-  //if not define a limit he will be calculate based in this and that args.
+
+  // If the limit is not defined it will be calculate from this and that args.
   limit = (limit || ((thatLength > thisLength ? thatLength : thisLength)))+1;
 
   for (var i = 0; i < limit; i++) {
@@ -56,7 +54,7 @@ module.exports = function(__this, that, limit) {
   return prepare (matrix[thisLength][thatLength]);
 
 /**
- * 
+ *
  */
   function prepare(steps) {
     var distance = {
