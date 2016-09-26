@@ -57,12 +57,16 @@ module.exports = function(__this, that, limit) {
  *
  */
   function prepare(steps) {
-    var distance = {
+    var length = Math.max(thisLength, thatLength)
+    var relative = length === 0
+      ? 0
+      : (steps / length);
+    var similarity = 1 - relative
+    return {
       steps: steps,
-      relative: (steps / Math.max(thisLength, thatLength)) || 0
+      relative: relative,
+      similarity: similarity
     };
-    distance.similarity = (distance.relative !== 0) ?(1 - distance.relative) : 0;
-    return distance;
   }
 
 };
