@@ -8,45 +8,45 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [1.0.3] - 2016-09-26
 
-### Fixed
-- A title of this document :P by @lzrski
+Fixed:
+- A title of this document :P
 
-### Added
+Added:
 - List of contributors
 - Bugs URL
 - Git repository URL
 
 ## [1.0.2] - 2016-09-26
 
-### Fixed
+Fixed:
 - Similarity 0 returned for equal strings #4 by @lzrski
 
 ## [1.0.1] - 2016-09-12
 
-### Fixed
+Fixed:
 - Wrong results for transposition #2 by @g-adolph
 
-### Added
+Added:
 - First unit test by @g-adolph
-- A Change Log :)
+- A Change Log :) by @lzrski
 
 ## [1.0.0] - 2016-02-23
 
-### Fixed
+Fixed:
 - Update README to match the actual output by @gilly3
 
 ## [0.1.3] - 2013-09-02
 
-### Fixed
-- Clear matrix on each call
-- Always return object
+Fixed:
+- Clear matrix on each call @lzrski
+- Always return an object @lzrski
 
 ## [0.1.2] - 2013-08-29
 
-### Added
+Added:
 - ReadMe
 
 ## [0.1.1] - 2013-08-28
 
-### Added
-- Initial working release
+Added:
+- Initial working release @lzrski
