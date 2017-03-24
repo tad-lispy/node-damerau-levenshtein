@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+*nothing here yet*
+
+## [1.0.4] - 2017-03-24
+
 Fixed:
 - Fails in strict mode #7 by @gilly3
 
