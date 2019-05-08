@@ -15,3 +15,28 @@ It provides a function that takes two string arguments and returns a hash like t
 ````
 
 Please see [tests](./test/test.js) for more insights.
+
+
+### Example
+
+Here is how you can use this package in an _Angular_ project:
+
+1. Install the package in your project
+    `npm install damerau-levenshtein`
+
+2. Import into your project
+    `import * as levenshtien from 'damerau-levenshtein';`
+
+3. Use wherever
+    `const lev = levenshtien('hello world', 'Hello World!');`
+
+*Optional*
+
+If you're using _TypeScript_, create an interface
+```ts
+interface LevenshteinResponse {
+  steps: number;
+  relative: number;
+  similarity: number;
+}
+```
