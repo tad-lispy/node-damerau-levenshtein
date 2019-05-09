@@ -17,26 +17,36 @@ It provides a function that takes two string arguments and returns a hash like t
 Please see [tests](./test/test.js) for more insights.
 
 
-### Example
+# Install
 
-Here is how you can use this package in an _Angular_ project:
+```sh
+npm install damerau-levenshtein
+```
 
-1. Install the package in your project
-    `npm install damerau-levenshtein`
+### Use with ES6 modules
 
-2. Import into your project
-    `import * as levenshtien from 'damerau-levenshtein';`
+```js
+import * as levenshtien from 'damerau-levenshtein';
 
-3. Use wherever
-    `const lev = levenshtien('hello world', 'Hello World!');`
+const lev = levenshtien('hello world', 'Hello World!');
+// { steps: 4, relative: 0.3076923076923077, similarity: 0.6923076923076923 }
+```
 
-*Optional*
+### Use with TypeScript
 
-If you're using _TypeScript_, create an interface
 ```ts
+import * as levenshtien from 'damerau-levenshtein';
+
 interface LevenshteinResponse {
   steps: number;
   relative: number;
   similarity: number;
 }
+
+const lev: LevenshteinResponse = levenshtien('hello world', 'Hello World!');
+
+console.log(lev.steps);
+// 2
+console.log(lev.foo);
+// TypeScript Error: Property 'foo' does not exist on type 'LevenshteinResponse'.
 ```
