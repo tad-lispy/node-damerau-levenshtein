@@ -14,9 +14,6 @@ It provides a function that takes two string arguments and returns a hash like t
 }
 ````
 
-Please see [tests](./test/test.js) for more insights.
-
-
 # Install
 
 ```sh
@@ -31,6 +28,8 @@ import * as levenshtien from 'damerau-levenshtein';
 const lev = levenshtien('hello world', 'Hello World!');
 // { steps: 4, relative: 0.3076923076923077, similarity: 0.6923076923076923 }
 ```
+
+Please see [tests](./test/test.js) for more insights.
 
 ### Use with TypeScript
 
