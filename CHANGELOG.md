@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
-*nothing here yet*
+- Example use in README.md by @whyboris
 
 ## [1.0.4] - 2017-03-24
 
