@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. The format 
 ## [Unreleased]
 
 - Upgrade Mocha to version 6.1.4 #12 by @whyboris 
+- Example use in README.md by @whyboris
 
 ## [1.0.4] - 2017-03-24
 
