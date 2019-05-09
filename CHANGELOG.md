@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+Changed:
 - Upgrade Mocha to version 6.1.4 #12 by @whyboris 
 - Example use in README.md by @whyboris
 
@@ -25,7 +26,7 @@ Added:
 ## [1.0.2] - 2016-09-26
 
 Fixed:
-- Similarity 0 returned for equal strings #4 by @lzrski
+- Similarity 0 returned for equal strings #4 by @tad-lispy
 
 ## [1.0.1] - 2016-09-12
 
@@ -34,7 +35,7 @@ Fixed:
 
 Added:
 - First unit test by @g-adolph
-- A Change Log :) by @lzrski
+- A Change Log :) by @tad-lispy
 
 ## [1.0.0] - 2016-02-23
 
@@ -44,8 +45,8 @@ Fixed:
 ## [0.1.3] - 2013-09-02
 
 Fixed:
-- Clear matrix on each call @lzrski
-- Always return an object @lzrski
+- Clear matrix on each call @tad-lispy
+- Always return an object @tad-lispy
 
 ## [0.1.2] - 2013-08-29
 
@@ -55,4 +56,4 @@ Added:
 ## [0.1.1] - 2013-08-28
 
 Added:
-- Initial working release @lzrski
+- Initial working release @tad-lispy

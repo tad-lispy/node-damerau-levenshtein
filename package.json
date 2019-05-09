@@ -27,9 +27,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lzrski/node-damerau-levenshtein.git"
+    "url": "https://github.com/tad-lispy/node-damerau-levenshtein.git"
   },
   "bugs": {
-    "url": "https://github.com/lzrski/node-damerau-levenshtein/issues"
+    "url": "https://github.com/tad-lispy/node-damerau-levenshtein/issues"
   }
 }
