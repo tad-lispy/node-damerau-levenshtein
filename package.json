@@ -4,7 +4,8 @@
   "description": "Damerau - Levenshtein distance by The Spanish Inquisition + relative distance",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --use_strict"
+    "test": "mocha --use_strict",
+    "version": "scripts/update-changelog.sh"
   },
   "keywords": [
     "Damerau-Levenshtein",
