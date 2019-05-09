@@ -16,9 +16,10 @@
   ],
   "author": "The Spanish Inquisition",
   "contributors": [
-    "Tadeusz Łazurski (https://www.lazurski.pl/)",
+    "Tadeusz Łazurski (https://tad-lispy.com/)",
     "Gustavo Marques Adolph",
-    "Ivan Gilchrist <github@jumpingfishes.com> (http://jumpingfishes.com)"
+    "Ivan Gilchrist <github@jumpingfishes.com> (http://jumpingfishes.com)",
+    "Boris Yakubchik (http://dev.yboris.com/)"
   ],
   "license": "BSD-2-Clause",
   "devDependencies": {
