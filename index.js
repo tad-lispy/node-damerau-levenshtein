@@ -9,7 +9,7 @@ module.exports = function(firstString, secondString, limit) {
       matrix = [];
 
   // If the limit is not defined it will be calculate from firstString and secondString args.
-  limit = (limit || ((secondLength > firstLength ? secondLength : firstLength)))+1;
+  limit = (limit || ((secondLength > firstLength ? secondLength : firstLength))) + 1;
 
   for (var i = 0; i < limit; i++) {
     matrix[i] = [i];
@@ -19,13 +19,13 @@ module.exports = function(firstString, secondString, limit) {
     matrix[0][i] = i;
   }
 
-  if (Math.abs(firstLength - secondLength) > (limit || 100)){
+  if (Math.abs(firstLength - secondLength) > (limit || 100)) {
     return prepare (limit || 100);
   }
-  if (firstLength === 0){
+  if (firstLength === 0) {
     return prepare (secondLength);
   }
-  if (secondLength === 0){
+  if (secondLength === 0) {
     return prepare (firstLength);
   }
 
@@ -47,15 +47,21 @@ module.exports = function(firstString, secondString, limit) {
       if ((t = matrix[i - 1][j - 1] + cost) < min) min = t;   // Substitution.
 
       // Update matrix.
-      matrix[i][j] = (i > 1 && j > 1 && this_i === secondString[j-2] && firstString[i-2] === that_j && (t = matrix[i-2][j-2]+cost) < min) ? t : min; // Transposition.
+      matrix[i][j] = (
+           i > 1 
+        && j > 1 
+        && this_i === secondString[j-2] 
+        && firstString[i-2] === that_j 
+        && (t = matrix[i-2][j-2]+cost) < min
+      ) ? t : min; // Transposition.
     }
   }
 
   return prepare (matrix[firstLength][secondLength]);
 
-/**
- *
- */
+  /**
+   * Compute the `relative` and `similarity` and return object along with `steps`
+   */
   function prepare(steps) {
     var length = Math.max(firstLength, secondLength)
     var relative = length === 0
