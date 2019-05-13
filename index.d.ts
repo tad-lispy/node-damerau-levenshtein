@@ -1,5 +1,5 @@
 declare module 'damerau-levenshtein' {
-  export default function lev(arg1: string, arg2: string, arg3?: number): LevenshteinResponse;
+  export default function lev(firstString: string, secondString: string, limit?: number): LevenshteinResponse;
 }
 
 interface LevenshteinResponse {
