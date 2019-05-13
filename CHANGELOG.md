@@ -5,9 +5,12 @@ All notable changes to this project will be documented in this file. The format 
 ## [Unreleased]
 
 Changed:
+- Add TypeScript typings by @whyboris
+
+## [1.0.5] - 2019-05-09
+
 - Upgrade Mocha to version 6.1.4 #12 by @whyboris 
 - Example use in README.md by @whyboris
-- Add TypeScript typings by @whyboris
 
 ## [1.0.4] - 2017-03-24
 
