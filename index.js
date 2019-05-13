@@ -15,18 +15,21 @@ module.exports = function(firstString, secondString, limit) {
     matrix[i] = [i];
     matrix[i].length = limit;
   }
+
   for (i = 0; i < limit; i++) {
     matrix[0][i] = i;
   }
 
   if (Math.abs(firstLength - secondLength) > (limit || 100)) {
-    return prepare (limit || 100);
+    return prepare(limit || 100);
   }
+
   if (firstLength === 0) {
-    return prepare (secondLength);
+    return prepare(secondLength);
   }
+
   if (secondLength === 0) {
-    return prepare (firstLength);
+    return prepare(firstLength);
   }
 
   // Calculate matrix.
@@ -57,16 +60,14 @@ module.exports = function(firstString, secondString, limit) {
     }
   }
 
-  return prepare (matrix[firstLength][secondLength]);
+  return prepare(matrix[firstLength][secondLength]);
 
   /**
    * Compute the `relative` and `similarity` and return object along with `steps`
    */
   function prepare(steps) {
     var length = Math.max(firstLength, secondLength)
-    var relative = length === 0
-      ? 0
-      : (steps / length);
+    var relative = length === 0 ? 0 : (steps / length);
     var similarity = 1 - relative
     return {
       steps: steps,
@@ -74,5 +75,4 @@ module.exports = function(firstString, secondString, limit) {
       similarity: similarity
     };
   }
-
 };
