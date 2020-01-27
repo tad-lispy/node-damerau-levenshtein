@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+
+## [1.0.6] - 2020-01-27
+
 Changed:
 - Upgrade lodash to version 4.17.15 #16
 
