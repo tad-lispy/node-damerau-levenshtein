@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+Fixed:
+- The script/update-changelog.sh wouldn't work without gsed in path
+
 Security:
 - Upgrade lodash (transitive development dependency) #17
 - Upgrade yargs/y18n (transitive development dependency) #18
