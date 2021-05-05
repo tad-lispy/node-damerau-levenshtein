@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+
+## [1.0.7] - 2021-05-05
+
 Fixed:
 - The script/update-changelog.sh wouldn't work without gsed in path
 
