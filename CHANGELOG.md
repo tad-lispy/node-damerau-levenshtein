@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. The format 
 ## [Unreleased]
 
 Security:
+- Upgrade lodash (transitive development dependency) #17
 - Upgrade yargs/y18n (transitive development dependency) #18
 
 
