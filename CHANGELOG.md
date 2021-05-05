@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+Security:
+- Upgrade  yargs/y18n #18
+
 
 ## [1.0.6] - 2020-01-27
 
