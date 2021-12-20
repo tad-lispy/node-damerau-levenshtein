@@ -4,6 +4,9 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+
+## [1.0.8] - 2021-12-20
+
 Security:
 - Upgrade mocha to > 9.0.0 (fixes three security vulnerabilities brought by transitive dependencies)
 
