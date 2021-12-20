@@ -4,11 +4,13 @@ All notable changes to this project will be documented in this file. The format 
 
 ## [Unreleased]
 
+Security:
+- Upgrade mocha to > 9.0.0 (fixes three security vulnerabilities brought by transitive dependencies)
 
 ## [1.0.7] - 2021-05-05
 
 Fixed:
-- The script/update-changelog.sh wouldn't work without gsed in path
+- The scripts/update-changelog.sh wouldn't work without gsed in path
 
 Security:
 - Upgrade lodash (transitive development dependency) #17
